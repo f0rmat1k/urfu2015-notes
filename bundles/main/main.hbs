@@ -4,12 +4,14 @@
     <meta charset="{{ meta.charset }}">
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ meta.description }}">
-    <link rel="stylesheet" href="http://urfu2015-notes.surge.sh/main.css" media="screen">
+    <link rel="stylesheet" href="/main.bundle.css">
 </head>
 <body>
     {{> header/header }}
-    <p>{{ message }}</p>
+    <p>{{{ message }}}</p>
     {{> footer/footer }}
+
+    <!--todo добавить переменную на путь статики-->
     <script src="http://urfu2015-notes.surge.sh/main.js"></script>
 </body>
 </html>

@@ -42,3 +42,13 @@ exports.create = (req, res) => {
 
     res.send(data);
 };
+
+exports.checks = (req, res, next) => {
+    if (!req.body.name.trim() || !req.body.text.trim()) {
+        res.status(400).send('Заполните все поля.');
+
+        return;
+    }
+
+    next();
+};

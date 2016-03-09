@@ -1,6 +1,9 @@
 exports.index = (req, res) => {
     const data = {
-        message: 'Hello, User!'
+        message: `
+            Добро пожаловать в наш сервис заметок! Здесь мы можете добавлять заметки.
+            <a href="/notes">А вот и их список</a>.
+        `
     };
 
     res.render('main/main', Object.assign(data, req.commonData));

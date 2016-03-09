@@ -7,7 +7,11 @@
 </head>
 <body>
     {{> header/header }}
-    {{ text }}
+    <div class="note">
+        <div class="note__name">{{ name }}</div>
+        <div class="note__text">{{ text }}</div>
+    </div>
+
     {{> footer/footer }}
 </body>
 </html>

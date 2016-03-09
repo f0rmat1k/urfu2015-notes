@@ -49,3 +49,5 @@ require('./routes')(app);
 hbs.registerPartials(path.join(__dirname, 'blocks'));
 
 app.listen(8080, () => console.log('Listening on port 8080'));
+
+module.exports = app;

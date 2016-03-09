@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="{{ meta.charset }}">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <link rel="stylesheet" href="http://urfu2015-notes.surge.sh/notes.css" media="screen">
+</head>
+<body>
+    {{> header/header }}
+    {{#if notes.length}}
+    <ul>
+        {{#each notes}}
+            <li><a href="/notes/{{ name }}">{{ name }}</a></li>
+        {{/each}}
+    </ul>
+    {{^}}
+    Notes not found
+    {{/if}}
+    {{> footer/footer }}
+</body>
+</html>

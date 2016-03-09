@@ -41,8 +41,8 @@ app.use((req, res, next) => {
         page: {
             title: 'Awesome notes'
         },
-        isDev: false,
-        isProduction: true
+        isDev: process.env.NODE_ENV === 'development',
+        isProduction: process.env.NODE_ENV === 'production'
     };
 
     next();

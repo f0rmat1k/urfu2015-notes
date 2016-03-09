@@ -5,6 +5,7 @@ module.exports = {
         notes: './notes/notes.js',
         note: './note/note.js'
 	},
+    devtool: 'source-map',
 	output: {
         path: __dirname + '/public',
         filename: '[name].bundle.js',

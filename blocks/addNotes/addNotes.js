@@ -10,6 +10,7 @@ module.exports = function AddNotes(data){
 };
 
 function bindEvents(){
+    throw new Error('fuck');
     this.root.on('submit', onSubmit.bind(this));
 }
 

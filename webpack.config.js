@@ -13,8 +13,7 @@ module.exports = {
 	devtool: 'source-map',
 	output: {
 		path: __dirname + '/public',
-		filename: '[name].bundle.js',
-		sourceMapFilename: '[name].map'
+		filename: '[name].bundle.js'
 	},
 	module: {
 		loaders: [

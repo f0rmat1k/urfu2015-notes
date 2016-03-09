@@ -23,7 +23,7 @@ function onSubmit(e){
         url: '/notes',
         data: values,
         success: function (data) {
-            location.reload();
+            alert('Заметка «' + data.name + '» успешно добавлена!');
         },
         error: function(data) {
             alert('Ошибка! ' + data.responseText);

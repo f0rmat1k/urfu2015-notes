@@ -27,7 +27,7 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractTextPlugin('[name].bundle.css'),
-		//new webpack.optimize.UglifyJsPlugin()
+		new webpack.optimize.UglifyJsPlugin()
 	],
 	postcss: function () {
 		return [

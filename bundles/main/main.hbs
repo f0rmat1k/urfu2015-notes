@@ -9,9 +9,13 @@
 <body>
     {{> header/header }}
     <p>{{{ message }}}</p>
+
+    {{> addNotes/addNotes }}
+
     {{> footer/footer }}
 
+    <script src="//yastatic.net/jquery/2.2.0/jquery.min.js"></script>
     <!--todo добавить переменную на путь статики-->
-    <script src="http://urfu2015-notes.surge.sh/main.js"></script>
+    <script src="/main.bundle.js"></script>
 </body>
 </html>

@@ -18,6 +18,8 @@ app.set('view engine', 'hbs');
 app.use(morgan('dev'));
 app.use(express.static(publicDir));
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
@@ -48,6 +50,7 @@ require('./routes')(app);
 
 hbs.registerPartials(path.join(__dirname, 'blocks'));
 
-app.listen(8080, () => console.log('Listening on port 8080'));
+app.listen(app.get('port'),
+    () => console.log(`Listening on port ${app.get('port')}`));
 
 module.exports = app;
